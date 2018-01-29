@@ -1,0 +1,166 @@
+<template name="FilterData">
+        <div class="container">
+                <h3>Filter Data | Email Report</h3>
+                <hr>
+                <div class="row">
+                        <div class="col-md-4 search-actions">
+                                <form class="form-filterdata" id="filterData">
+                                        <div class="row formheader">
+                                                <div class="search-form-header">
+                                                        <label class="pull-left">Options
+                                                        </label>
+                                                </div>
+                                        </div>
+                                        <div class="search-fields">
+                                                <div class="row">
+                                                        <div class="pull-left">
+                                                                <label for="date">Date Range
+                                                                </label>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="text-center">
+                                                                <div class="form-group">
+                                                                        <input type="text" name="fromdate" class="form-control set-due-date datepicker" id="fromDate" placeholder="MM/DD/YYYY" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <input type="text" name="todate" class="form-control set-due-date datepicker" id="toDate" placeholder="MM/DD/YYYY" />
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="pull-left">
+                                                                <label for="Category">Category
+                                                                </label>
+                                                        </div>
+
+                                                </div>
+                                                <div class="row">
+                                                        <div class="text-center">
+                                                                <div class="form-group">
+                                                                        <select name="category" id="Category" class="form-control required">
+                                                                                        <!-- {{#each Categorydata}} -->
+                                                                                        <!-- <option value="{{UniqueRecordId}}">{{Name}}</option> -->
+                                                                                        <!-- {{/each}} -->
+                                                                                        <option value="1">Breakfast</option>
+                                                                                        <option value="2">Lunch</option>
+                                                                                        <option value="3">Snack</option>
+                                                                                        <option value="4">Dinner</option>
+                                                                                        <option value="5">Bedtime</option>
+                                                                                        <option value="0">No Category</option>
+                                                                        </select>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="pull-left">
+                                                                <label for="dataFormat">Value Range
+                                                                </label>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="text-center">
+                                                                <div class="form-group">
+                                                                        <input type="number" name="fromglucosevalue" class="form-control" id="fromGlucoseValue" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <input type="number" name="toglucosevalue" class="form-control" id="toGlucoseValue" />
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="pull-left">
+                                                                <label for="dataFormat">Notes
+                                                                </label>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="text-center">
+                                                                <div class="form-group">
+                                                                        <textarea name="glucosenotes" class="form-control" id="glucoseNotes" cols="30" rows="5"></textarea>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="pull-left">
+                                                                <label for="dataFormat">Tags
+                                                                </label>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="text-center">
+                                                                <div class="form-group">
+                                                                        <input type="tags" name="glucosetags" class="form-control" id="glucoseTags" placeholder="eg:sick, after meal, hungry" />
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="form-group">
+
+                                                                <button class="C-button" id="cancel-search" type="reset">Reset</button>
+                                                                <button class="G-button pull-right" id="filter-glucoseSearch" type="submit">Filter</button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </form>
+                        </div>
+                        <div class="col-md-6 search-results">
+                                <div class="panel-body">
+                                        <table class="table table-condensed" style="border-collapse:collapse;">
+                                                <thead>
+                                                        <tr>
+                                                                <th>&nbsp;</th>
+                                                                <th>Value</th>
+                                                                <th>Category</th>
+                                                                <th>Date</th>
+                                                                <th>Time</th>
+                                                        </tr>
+                                                </thead>
+
+                                                <tbody>
+
+                                                        {{#each Glucosedata}}
+                                                        <tr data-toggle="collapse" data-target=".{{_id}}" class="accordion-toggle" id="remove1-{{_id}}">
+                                                                <td>
+                                                                        <!-- <button class="btn btn-default btn-xs"> -->
+                                                                        <span class="glyphicon glyphicon-plus" id="{{_id}}-toggle"></span>
+                                                                        <!-- </button> -->
+                                                                </td>
+
+                                                                <td>
+                                                                        <a id=UniqueRecordId href="/edit_glucose/{{UniqueRecordId}}">{{GlucoseValue}}</a>
+                                                                </td>
+                                                                <td>{{getCategoryName CategoryId}}</td>
+                                                                <td>{{formatDate Date}}</td>
+                                                                <td>{{Time}}</td>
+                                                                <td>
+
+                                                                        <a href="#">
+                                                                                <span class="glyphicon glyphicon-remove remove-glucose" id="{{UniqueRecordId}}"></span>
+                                                                        </a>
+
+                                                                </td>
+                                                        </tr>
+
+                                                        <tr id="remove2-{{_id}}">
+                                                                <td colspan="6" class="hiddenRow">
+                                                                        <div class="accordian-body collapse {{_id}}">
+                                                                                <b>Tags :</b>
+                                                                                <span>&nbsp; {{Tags}}</span>
+                                                                        </div>
+                                                                        <div class="accordian-body collapse {{_id}}">
+                                                                                <b>Notes :</b>
+                                                                                <span>&nbsp; {{Notes}}</span>
+                                                                        </div>
+                                                                </td>
+                                                        </tr>
+                                                        {{/each}}
+
+                                                </tbody>
+                                        </table>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+</template>

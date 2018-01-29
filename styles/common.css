@@ -1,0 +1,250 @@
+
+
+.gnav-bar {
+    background-color: #990099;
+    height: 78px;
+}
+
+.gnav-bar a {
+    color: #fefefe;
+}
+
+.nav-content {
+    margin-top: 10px;
+}
+
+.gbrand {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.error {
+    color: #FF0000;
+}
+
+.search-actions {
+    border: 1px solid rgba(204, 204, 204, 1);
+}
+
+.form-filterdata {
+    min-height: 100%;
+}
+
+.formheader {
+    border-bottom: 1px solid rgba(204, 204, 204, 1);
+    padding: 10px;
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.search-fields {
+    padding: 30px;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.U-link{
+    text-decoration: underline;
+    color: black;
+}
+
+.U-link:hover{
+    color: black;
+}
+
+.UN-link{
+    padding-top: 12px !important;
+}
+
+.N-link{
+    text-decoration: none;
+    padding-left:5px;
+}
+
+.N-link:hover{
+background-color: #990099 !important;
+}
+
+.menu-icon{
+    
+}
+
+.collapse ul li .N-link{
+    background-color: #990099 !important;
+}
+
+.collapse ul li .signup{
+    background-color: rgba(25, 158, 216, 1);
+}
+
+.collapse ul li .login{
+    background-color: rgba(0, 204, 153, 1);
+}
+
+.G-button{
+    border-width: 0px;
+    width: 120px;
+    height: 40px;
+    background: inherit;
+    color:#FFFFFF;
+    background-color: rgba(0, 204, 153, 1);
+    border: none;
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Arial Black', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    margin:5px;
+}
+
+.G-button:hover{
+    color:#FFFFFF !important;;
+    background-color: rgba(0, 204, 153, 1) !important;
+}
+
+.G-button.selected::after{
+    color:#FFFFFF !important;;
+    background-color: rgba(0, 204, 153, 1) !important;
+}
+
+.B-button{
+    border-width: 0px;
+    width: 145px;
+    height: 40px;
+    background: inherit;
+    color:#FFFFFF;
+    background-color: rgba(25, 158, 216, 1);
+    border: none;
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Arial Black', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    margin:5px;
+}
+
+.B-button:hover{
+    color:#FFFFFF !important;;
+    background-color: rgba(25, 158, 216, 1) !important;
+}
+
+.C-button{
+    border-width: 0px;
+    width: 80px;
+    height: 40px;
+    background: inherit;
+    color:#FFFFFF;
+    background-color: rgba(102, 102, 102, 1);
+    border: none;
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Arial Black', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    margin:5px;
+}
+
+.C-button:hover{
+    color:#FFFFFF !important;;
+    background-color: rgba(102, 102, 102, 1) !important;
+}
+
+.R-button{
+    border-width: 0px;
+    width: 80px;
+    height: 40px;
+    background: inherit;
+    color:#FFFFFF;
+    background-color: rgba(204, 102, 102, 1);
+    border: none;
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Arial Black', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    margin:5px;
+}
+
+.R-button:hover{
+    color:#FFFFFF !important;;
+    background-color: rgba(204, 102, 102, 1) !important;
+}
+
+.V-box{
+    width: 20px;
+    height: 25px;
+    margin-right:5px;
+    background-color: #990099;
+}
+
+.icon{
+    color: #fefefe;
+    padding: 4px 0px 8px 4px;
+    font-size: 14px !important;
+}
+
+.panel-heading {
+background-color: none !important;
+}
+
+.remove-glucose{
+    color:maroon;
+    text-decoration: none;
+}
+
+.glucosetableData{
+    margin-top:5px;
+}
+
+.btn-xs{
+    border-radius: 5px !important;
+}
+
+#addmore-glucose{
+    width: 180px;
+}
+
+#delete-glucose a, .cancel-delete-glucose {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+.share-leftOptions{
+    background-color: rgba(242, 242, 242, 1);
+    padding-top: 25px;
+}
+
+.glyphicon-plus{
+    color:#4dcd98 !important;
+    cursor: pointer;
+}
+
+.glyphicon-minus{
+    color:#f74a00 !important;
+    cursor: pointer;
+}
+
+.submit-new-password{
+    width:180px;
+}
+
+.panel-body{
+    border: 1px solid rgba(204, 204, 204, 1);
+}
+
+.signup-user{
+    width:180px;
+}
+
+
+
+

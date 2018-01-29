@@ -1,0 +1,94 @@
+<template name="Signup">
+        <div class="container">
+                <div class="col-md-12">
+                        <h1><span class="V-box">
+                                <span class="glyphicon glyphicon-check icon"></span>
+                        </span>Sign Up Now for a FREE Account. Only takes a minute.</h1>
+                </div>
+                <form class="form-signup col-md-12 new-user" id="addUser">
+                        <h4>Create Your Account</h4>
+                        <hr>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="username">Username
+                                                <sup class="mandatory">*</sup>
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <input type="text" name="username" class="form-control required" id="username" placeholder="Enter Username" />
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="password">Password
+                                                <sup class="mandatory">*</sup>
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <input type="password" name="password" class="form-control required" id="password" placeholder="Enter Password" />
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="email">Email
+                                                <sup class="mandatory">*</sup>
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <input type="text" name="email" class="form-control required" id="email" placeholder="Enter a valid Email address" />
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="email">Glucose Unit
+                                                <sup class="mandatory">*</sup>
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <select name="glucodeUnit" id="glucodeUnit" class="form-control required">
+                                                        <option value="mg-dL">mg/dL</option>
+                                                        <option value="mmol-L">mmol/L</option>
+                                                </select>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="timeZone">Time Zone
+                                                <sup class="mandatory">*</sup>
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <select name="timeZone" id="timeZone" class="form-control required">
+                                                        <option value="EST">EST</option>
+                                                        <option value="CST">CST</option>
+                                                        <option value="MST">MST</option>
+                                                        <option value="PST">PST</option>
+                                                        <option value="AKST">AKST</option>
+                                                        <option value="HAST">HAST</option>
+                                                </select>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-7">
+                                        <div class="form-group">
+                                                <button class="G-button signup-user pull-right">Create my account</button>
+                                        </div>
+                                </div>
+                        </div>
+
+
+                </form>
+
+        </div>
+
+</template>

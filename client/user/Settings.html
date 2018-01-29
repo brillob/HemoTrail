@@ -1,0 +1,240 @@
+<template name="Settings">
+        <div class="container">
+                <div class="col-md-12 ">
+                        <form class="form-passwordChange new-user" id="changePassword">
+                                <h3>
+                                        <span class="V-box">
+                                                <span class="glyphicon glyphicon-pencil icon"></span>
+                                        </span>Change Password</h3>
+                                <hr>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="oldPassword">Old Password
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="password" name="oldpassword" class="form-control required" id="oldPassword" placeholder="Enter Current Password"
+                                                        />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="newPassword">New Password
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="password" name="newpassword" class="form-control required" id="newPassword" placeholder="Enter New Password"
+                                                        />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="r_newPassword">Repeat New Password
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="password" name="r_newpassword" class="form-control required" id="r_newPassword" placeholder="Repeat New Password"
+                                                        />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row col-md-7">
+                                        <div class="form-group col-md-offset-8">
+                                                <button class="G-button submit-new-password">Apply New Password</button>
+                                        </div>
+                                </div>
+
+                        </form>
+                </div>
+                <div class="col-md-12">
+                        <h3>
+                                <span class="V-box">
+                                        <span class="glyphicon glyphicon-pencil icon"></span>
+                                </span>Account Settings</h3>
+                        <hr>
+
+                        <form class="form-userdataChange" id="changeaccountSettings">
+                                {{#each Userdata}}
+                                <h4>Profile</h4>
+                                <hr>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="Username">Username
+                                                        <sup class="mandatory">*</sup>
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="text" name="username" class="form-control required" id="Username" placeholder="Enter Username" value="{{Username}}"
+                                                        />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="Email">Email
+                                                        <sup class="mandatory">*</sup>
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="text" name="email" class="form-control required" id="Email" placeholder="Enter Email" value="{{Email}}" />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="Firstname">First Name
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="text" name="firstname" class="form-control" id="Firstname" placeholder="Enter First Name" value="{{FirstName}}"
+                                                        />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="Lastname">Last Name
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="text" name="lastname" class="form-control" id="Lastname" placeholder="Enter Last Name" value="{{LastName}}"
+                                                        />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="timeZone">Time Zone
+                                                        <sup class="mandatory">*</sup>
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <select name="timeZone" id="timeZone" class="form-control">
+                                                        <option value="EST">EST</option>
+                                                        <option value="CST">CST</option>
+                                                        <option value="MST">MST</option>
+                                                        <option value="PST">PST</option>
+                                                        <option value="AKST">AKST</option>
+                                                        <option value="HAST">HAST</option>
+                                                </select>
+                                        </div>
+
+
+                                </div>
+                                <h4>Preferences</h4>
+                                <hr>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="glucodeUnit">Glucose Unit
+                                                        <sup class="mandatory">*</sup>
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <select name="glucodeUnit" id="glucodeUnit" class="form-control">
+                                                        <option value="mg-dL">mg/dL</option>
+                                                        <option value="mmol-L">mmol/L</option>
+                                                </select>
+                                        </div>
+
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="category">Category
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <select name="category" id="category" class="form-control">
+                                                        <!-- {{#each Categorydata}}
+                                                        <option value="{{UniqueRecordId}}">{{Name}}</option>
+                                                        {{/each}} -->
+                                                        <option value="1">Breakfast</option>
+                                                        <option value="2">Lunch</option>
+                                                        <option value="4">Snack</option>
+                                                        <option value="3">Dinner</option>
+                                                        <option value="5">Bedtime</option>
+                                                        <option value="0">No Category</option>
+                                                </select>
+                                        </div>
+                                </div>
+                                <h4>Glucose Levels</h4>
+                                <hr>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="lowGlucoseValue">Low
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="number" name="lowglucosevalue" class="form-control" id="lowGlucoseValue" placeholder="60" value="{{GlucoseLowValue}}"
+                                                        />
+                                                        <p>Below this value is a low blood glucose.</p>
+                                                </div>
+
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="highGlucoseValue">High
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="number" name="highGlucoseValue" class="form-control" id="highGlucoseValue" placeholder="180" value="{{GlucoseHighValue}}"
+                                                        />
+                                                        <p>Below this value is a high blood glucose.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="targetMinGlucoseValue">Target Min
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="number" name="targetMinGlucoseValue" class="form-control" id="targetHighGlucoseValue" placeholder="70" value="{{GlucoseTargetMin}}"
+                                                        />
+                                                </div>
+                                                <p>Your target range's minimum value.</p>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="targetMaxGlucoseValue">Target Max
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="number" name="targetMaxGlucoseValue" class="form-control" id="targetLowGlucoseValue" placeholder="120" value="{{GlucoseTargetMax}}"
+                                                        />
+                                                        <p>Your target range's maximum value.</p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class="row col-md-7">
+                                                <div class="form-group pull-right">
+                                                        <button class="G-button submit-updatesettings">Save</button>
+                                                        <button class="C-button cancel-updatesettings">Cancel</button>
+                                                </div>
+                                        </div>
+                                </div>
+                                {{/each}}
+                        </form>
+
+                </div>
+        </div>
+
+</template>

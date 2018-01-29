@@ -1,0 +1,102 @@
+<template name="EditGlucose">
+                <div class="container">
+                        <form class="form-editGlucose col-md-12 new-user" id="editGlucose">
+                                {{#each Glucose}}
+                                <h4><span class="V-box">
+                                        <span class="glyphicon glyphicon-pencil icon"></span>
+                                </span>Edit Glucose</h4>
+                                <hr>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="glucoseValue">Value
+                                                        <sup class="mandatory">*</sup>
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+        
+                                                        <input type="Number" name="value" class="form-control required" id="glucoseValue" placeholder="Enter Value" value="{{GlucoseValue}}" />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="category">Category
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+        
+                                                        <select name="category" id="category" class="form-control">
+                                                                        <!-- {{#each Categorydata}}
+                                                                        <option value="{{UniqueRecordId}}">{{Name}}</option>
+                                                                        {{/each}} -->
+                                                                        <option value="1"  {{isSelected CategoryId "1"}}>Breakfast</option>
+                                                                        <option value="2"  {{isSelected CategoryId "2"}}>Lunch</option>
+                                                                        <option value="3"  {{isSelected CategoryId "3"}}>Snack</option>
+                                                                        <option value="4"  {{isSelected CategoryId "4"}}>Dinner</option>
+                                                                        <option value="5"  {{isSelected CategoryId "5"}}>Bedtime</option>
+                                                                        <option value="0"  {{isSelected CategoryId "0"}}>No Category</option>
+                                                        </select>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="glucoseDate">Date
+        
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="text" name="date" class="form-control set-due-date datepicker" id="glucoseDate" placeholder="MM/DD/YYYY" value="{{formatDate Date}}" />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="time">Time
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="text" name="time" class="form-control et-due-date timepicker" id="glucoseTime" placeholder="hh:mm" value="{{Time}}" />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="glucoseNotes">Notes
+                                                        <sup class="mandatory"></sup>
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <textarea name="notes" class="form-control" id="glucoseNotes" cols="50" rows="10">{{Notes}}</textarea>
+                                                </div>
+                                        </div>
+                                </div>
+        
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <label for="time">Tags
+                                                </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                        <input type="tags" name="tags" class="form-control" id="glucoseTags" placeholder="eg:sick, after meal, hungry" value="{{Tags}}" />
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row col-md-6 col-md-offset-1">
+                                        <div class="form-group">
+                                                <button class="G-button text-center" type="submit" id="add-glucose">Save</button>
+                                                <button class="C-button" id="cancel-glucose">Cancel</button>
+                                                <button class="R-button pull-right" id="delete-glucose" type="button"><a href="/delete_glucose/{{UniqueRecordId}}">Delete</a></button>
+                                        </div>
+                                </div>
+                                {{/each}}
+                        </form>
+                </div>
+        
+        </template>

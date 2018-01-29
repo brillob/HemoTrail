@@ -1,0 +1,119 @@
+<template name="ShareData">
+        <div class="container">
+                <form class="form-signup col-md-12" id="shareData">
+                        <h3><span class="V-box">
+                                <span class="glyphicon glyphicon-share-alt icon"></span>
+                        </span>Email Report | Filter Data</h3>
+                        <hr>
+                        <div class="row">
+                                <div class="col-md-6 share-leftOptions">
+                                        <div class="row">
+                                                <div class="col-md-3">
+                                                        <label for="dataFormat">Format
+                                                                <sup class="mandatory">*</sup>
+                                                        </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <div class="form-group">
+                                                                <select name="format" id="dataFormat" class="form-control required">
+                                                                        <option value="PDF">PDF</option>
+                                                                        <option value="CSV">CSV</option>
+                                                                </select>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-3">
+                                                        <label for="fromDate">From
+                                                                <sup class="mandatory">*</sup>
+                                                        </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <div class="form-group">
+                                                                <input type="text" name="fromdate" class="form-control required set-due-date datepicker" id="fromDate" placeholder="MM/DD/YYYY" />
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="row">
+                                                <div class="col-md-3">
+                                                        <label for="toDate">To
+                                                                <sup class="mandatory">*</sup>
+                                                        </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <div class="form-group">
+                                                                <input type="text" name="todate" class="form-control required set-due-date datepicker" id="toDate" placeholder="MM/DD/YYYY" />
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-3">
+                                                        <label>Optional Fields
+                                                        </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <div class="form-group">
+                                                                <div class="checkbox">
+                                                                        <label>
+                                                                                <input type="checkbox" value="notes">Notes
+                                                                        </label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                        <label>
+                                                                                <input type="checkbox" value="tags">Tags
+                                                                        </label>
+                                                                </div>
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                        <div class="row">
+                                                <div class="col-md-3">
+                                                        <label for="subject">Subject
+                                                        </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <div class="form-group">
+                                                                <input type="text" name="subject" class="form-control" id="subject" placeholder="Enter subject">
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="row">
+                                                <div class="col-md-3">
+                                                        <label for="sendTo">Send To
+                                                                <sup class="mandatory">*</sup>
+                                                        </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <div class="form-group">
+                                                                <input type="email" name="sendto" class="form-control required" id="sendTo" placeholder="Enter email">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-3">
+                                                        <label for="message">Message
+                                                        </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <div class="form-group">
+                                                                <textarea name="message" id="message" cols="40" rows="7" class="form-control" placeholder="Enter your message"></textarea>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="form-group pull-right">
+                                                        <button class="G-button send-data">Send</button>
+                                                </div>
+                                        </div>
+
+                                </div>
+                        </div>
+                </form>
+        </div>
+
+</template>

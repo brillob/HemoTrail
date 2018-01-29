@@ -1,0 +1,72 @@
+<template name="Dashboard">
+        <div class="container">
+                <div class="panel">
+                        <div class="panel-heading">
+                                <h3>
+                                        <span class="V-box">
+                                                <span class="glyphicon glyphicon-th-large icon"></span>
+                                        </span>
+                                        Dashboard
+                                </h3>
+                        </div>
+
+                        <div class="panel-body">
+                                <table class="table table-striped" style="border-collapse:collapse;">
+                                        <thead>
+                                                <tr>
+                                                        <th>&nbsp;</th>
+                                                        <th>Value</th>
+                                                        <th>Category</th>
+                                                        <th>Date</th>
+                                                        <th>Time</th>
+                                                        <th>&nbsp;</th>
+                                                </tr>
+                                        </thead>
+
+                                        <tbody class="glucosetableData">
+
+                                                {{#each Glucosedata}}
+                                                <tr data-toggle="collapse" data-target=".{{_id}}" class="accordion-toggle toggle">
+                                                        <td>
+                                                                <!-- <button class="btn btn-default "> -->
+                                                                <span class="glyphicon glyphicon-plus" id="{{_id}}-toggle"></span>
+                                                                <!-- </button> -->
+                                                        </td>
+
+                                                        <td>
+                                                                <a id=UniqueRecordId  href="/edit_glucose/{{UniqueRecordId}}">{{GlucoseValue}}</a>
+                                                        </td>
+
+                                                        <td>{{getCategoryName CategoryId}}</td>
+                                                        <td>{{formatDate Date}}</td>
+                                                        <td>{{Time}}</td>
+
+                                                        <td>
+                                                                <a href="#">
+                                                                        <span class="glyphicon glyphicon-remove remove-glucose" id="{{UniqueRecordId}}"></span>
+                                                                </a>
+
+                                                        </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td colspan="6" class="hiddenRow">
+                                                                <div class="accordian-body collapse {{_id}}">
+                                                                        <b>Tags: </b>
+                                                                        <span>&nbsp; {{Tags}}</span>
+                                                                </div>
+                                                                <div class="accordian-body collapse {{_id}}">
+                                                                        <b>Notes: </b>
+                                                                        <span>&nbsp; {{Notes}}</span>
+                                                                </div>
+                                                        </td>
+                                                </tr>
+                                                {{/each}}
+
+                                        </tbody>
+                                </table>
+                        </div>
+                </div>
+        </div>
+
+</template>

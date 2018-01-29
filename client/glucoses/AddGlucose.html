@@ -1,0 +1,99 @@
+<template name="AddGlucose">
+        <div class="container">
+                <form class="form-addGlucose col-md-12 new-user" id="addGlucose">
+                        <h3><span class="V-box">
+                                <span class="glyphicon glyphicon-bell icon"></span>
+                        </span>Add Glucose</h3>
+                        <hr>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="glucoseValue">Value
+                                                <sup class="mandatory">*</sup>
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <input type="Number" name="value" class="form-control required" id="glucoseValue" placeholder="Enter Value" />
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="category">Category
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <select name="category" id="category" class="form-control required">
+                                                        <!-- {{#each Categorydata}}
+                                                        <option value="{{UniqueRecordId}}">{{Name}}</option>
+                                                        {{/each}} -->
+                                                        <option value="1">Breakfast</option>
+                                                        <option value="2">Lunch</option>
+                                                        <option value="3">Snack</option>
+                                                        <option value="4">Dinner</option>
+                                                        <option value="5">Bedtime</option>
+                                                        <option value="0">No Category</option>
+                                                </select>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="glucoseDate">Date
+
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <input type="text" name="date" class="form-control set-due-date datepicker" id="glucoseDate" placeholder="MM/DD/YYYY" />
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="time">Time
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <input type="text" name="time" class="form-control set-due-date timepicker" id="glucoseTime" placeholder="hh:mm" />
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="glucoseNotes">Notes
+                                                <sup class="mandatory"></sup>
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <textarea name="notes" class="form-control" id="glucoseNotes" cols="50" rows="10"></textarea>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <label for="time">Tags
+                                        </label>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                                <input type="tags" name="tags" class="form-control" id="glucoseTags" placeholder="eg:sick, after meal, hungry" />
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row col-md-7">
+                                <div class="form-group">
+                                        <input type="submit" class="G-button pull-left" id="add-glucose" value="Save">
+                                        <input type="reset" class="C-button text-center"  id="cancel-glucose" value="Cancel">
+                                        <input type="submit" class="G-button pull-right"  id="addmore-glucose" value="Save &amp; Add more">
+                                </div>
+                        </div>
+
+                </form>
+        </div>
+
+</template>
